@@ -1,0 +1,198 @@
+/* global elements  starts */
+.radius {
+    border-radius: 20px;
+    backdrop-filter: blur(1px);
+}
+.red {
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    right: 200px;
+    top: 300px;
+}
+/* global elements end */
+
+/* main elements starts */
+body, .navbar, .navbar > ul {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-style: normal; 
+    font-variant: normal;
+    font-weight: 500; 
+    line-height: 24px; 
+}
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #001E39;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+/* main elements ends */
+
+/* top navbar starts */
+.navbar {
+    background: #001E39;
+    justify-content: space-between;
+    display: flex;
+}
+.navbar > ul {
+    display: flex;
+}
+.navbar > ul> li {
+    color: white;
+    list-style: none;
+}
+.navbar > .left > li > img {
+    margin: 2px;
+    margin-right: 13px ;
+}
+.navbar > .right > li {
+    margin: 0 5px;
+}
+
+.navbar > .left> li:nth-child(1):hover, .navbar > .right > li:hover {
+    cursor: pointer;
+}
+.round {
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 0 1px 3px 0 #002C55;
+}
+
+/* top  navbar home section starts*/
+
+.click {
+    overflow-y: scroll;
+    visibility: hidden;
+    background-color: #00162bc9;
+    top: 32px;
+    left: -2;
+    width: 500px;
+    border-radius: 10px;
+    height: 500px;
+    position: fixed;
+}
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
+}
+.tab {
+  cursor: pointer;
+}
+.tab.active {
+  background-color: rgb(0, 0, 0);
+}
+.tab:hover {
+  background-color: #AAA;
+}
+.tab-content {
+    height: 100%;
+    margin: 0 10px;
+}
+
+
+/* side*/
+  .vertical-tab {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .row {
+    display: flex;
+  }
+  .col-3 {
+    width: 35%;
+  }
+  .col-9 {
+    width: 65%;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+  .btn.active {
+    background-color: #ffffff;
+  }
+  .item {
+    display: none;
+  }
+  .item.active {
+    display: block;
+  }
+/* to navbar home section ends*/
+/* top navbar ends */
+
+/* bottom taskbar starts*/
+.footnav {
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 0;
+    height: 10vh;
+}
+
+.navbar > ul > li:hover > .click {
+    visibility: visible;
+}
+.footnav > div >button  {
+    transition: transform;
+    padding: 4px;
+    margin: 0 5px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: transparent;
+}
+.footnav > div {
+    border-radius: 20px;
+    display: flex;
+    margin-bottom: 30px;
+    background: rgba(130, 87, 130, 0.555);
+}
+.vertical {
+    border: 1px solid transparent;
+    background-color: wheat;
+    display: inline-block;
+    height: 80%; 
+    margin: 5px;
+    width: 0.5px;
+}
+.footnav > div > button > img:hover {
+    transform: scale(1.5) rotate(15deg);
+    position: relative;
+    bottom: 20px;
+    cursor: pointer;
+}
+/* bottom taskbar ends */
